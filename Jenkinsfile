@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry('https://dockervm3.intranet.vdschee.com', 'docker_hub_login') {
+                    docker.withRegistry('https://dockervm3.intranet.vdschee.com', 'Local_Docker_Reg') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
